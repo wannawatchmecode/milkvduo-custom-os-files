@@ -1,0 +1,32 @@
+------WebKitFormBoundarytmIqUxz8VYQexhmB
+Content-Disposition: form-data; name="file"; filename="tester.html"
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<label>Local file path</label>
+		<input type="text" id="LocalFilePath"/>
+		<label for="file">File to upload</label><input type="file" id="file" />
+		<label>Remote file path</label>
+		<input type="text" id="RemoteFilePath"/>
+		<input type="button" id="send" onclick="send()">Send</input>
+		<script type="text/javascript">
+			const url = "http://192.168.42.119:8000/upload";
+			function send() {
+				const request = new XMLHttpRequest();
+				const fileInput = document.getElementById("file");
+				request.open("POST", url);
+				request.setRequestHeader("x-file-name", document.getElementById("RemoteFilePath").value);
+				request.setRequestHeader("cors", "no-cors");	
+				const fileData = new FormData();
+    			fileData.append("file", fileInput.files[0]);
+				request.send(fileData);
+			}
+		</script>
+	</body>
+</html>
+
+------WebKitFormBoundarytmIqUxz8VYQexhmB--

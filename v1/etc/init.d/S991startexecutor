@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd /root/remote-command-executor/scripts
+
+/root/remote-command-executor/scripts/poll_and_execute.sh &

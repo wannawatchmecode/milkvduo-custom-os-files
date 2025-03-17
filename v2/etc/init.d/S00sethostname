@@ -1,0 +1,13 @@
+#! /bin/sh
+
+old_hostname=$(hostname)
+
+if [ "$old_hostname" = "milkv-duo" ] ;then
+        echo "Current hostname is $hostname ... updating"
+	new_name=$(/root/scripts/random_key.sh | awk '{print "milkv-duo-"$1}')
+	echo "Updating hostname to $new_name ..."
+        echo $new_name > /etc/hostname
+fi
+
+echo "hostname is $(hostname)"
+

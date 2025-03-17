@@ -1,0 +1,18 @@
+--------------------------o0Xf0K0FcFlDgRezgVcPLa
+Content-Disposition: form-data; name="file"; filename="wwmc_browsesharp_notes.txt"
+Content-Type: text/plain
+
+Hey Everyone,
+Today we will be diving into an old project I created. It's called BrowseSharp and it is a headless browser that allows you to scrape web pages. I wanted to make it support javascript execution, which is important in the world of SPA applications. I never got it working, but it looks like there are some new JS libraries in C# that I could potentially use.
+
+Let's get started by pulling down the code
+
+laptops going really slow for some reason
+
+Also downloaded request tester, it is a small nodejs app I used for testing. The reason is that I use restsharp as the underlying client, and wanted to make sure that the requests were being sent properly and at the time did not know how to do it any better. It actually works quite nice. I used to host a public version on GCP, but it got taken down, so we'll run it locally.
+
+This is tricky, going to move on to something else...
+
+BRB
+
+--------------------------o0Xf0K0FcFlDgRezgVcPLa--
